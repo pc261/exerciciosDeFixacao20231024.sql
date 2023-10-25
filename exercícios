@@ -2,3 +2,7 @@
 CREATE TRIGGER cliente_novo AFTER INSERT ON Clientes
 	FOR EACH ROW INSERT INTO Auditoria VALUES("Um novo cliente foi adicionado");
 
+-- 2.
+CREATE TRIGGER cliente_foideF BEFORE DELETE ON Clientes
+	FOR EACH ROW INSERT INTO Auditoria VALUES("Houve uma tentativa de exclusão de um cliente");
+
