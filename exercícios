@@ -1,0 +1,4 @@
+-- 1.
+CREATE TRIGGER cliente_novo AFTER INSERT ON Clientes
+	FOR EACH ROW INSERT INTO Auditoria VALUES("Um novo cliente foi adicionado");
+
